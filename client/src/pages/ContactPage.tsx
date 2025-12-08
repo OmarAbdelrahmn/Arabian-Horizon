@@ -60,17 +60,26 @@ export default function ContactPage() {
   // Handle Submit
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    
+
     try {
-      const response = await fetch('/api/contact', {
+      // Using Web3Forms - A free form service
+      // Get your access key from https://web3forms.com/
+      const formData = new FormData();
+      formData.append('access_key', '46ba9bf8-4baa-4d5f-8b5b-b2a1d27d8ece');
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('phone', values.phone);
+      formData.append('subject', values.subject);
+      formData.append('message', values.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
+        body: formData
       });
 
-      if (!response.ok) {
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
         throw new Error('Failed to send message');
       }
 
@@ -96,19 +105,19 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background font-tajawal flex flex-col">
       <Navbar />
       <main className="flex-grow pt-10">
-        
+
         {/* Header Section */}
         <section className="relative py-20 bg-muted/30 overflow-hidden">
           <div className="container px-4 mx-auto relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl md:text-5xl font-bold text-primary mb-6"
               >
                 تواصل معنا
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -122,23 +131,23 @@ export default function ContactPage() {
 
         <section className="py-20 container px-4 mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            
+
             {/* Contact Info & Image */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
               className="space-y-8"
             >
               <div className="bg-primary text-white rounded-3xl p-8 shadow-xl overflow-hidden relative">
-                <img 
-                  src={contactImg} 
-                  alt="Contact Background" 
+                <img
+                  src={contactImg}
+                  alt="Contact Background"
                   className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay"
                 />
                 <div className="relative z-10 space-y-8">
                   <h3 className="text-2xl font-bold mb-6">معلومات التواصل</h3>
-                  
+
                   <div className="flex items-center gap-4">
                     <div className="bg-white/20 p-3 rounded-full">
                       <MapPin className="w-6 h-6" />
@@ -187,7 +196,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Form */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
@@ -200,7 +209,7 @@ export default function ContactPage() {
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -280,10 +289,10 @@ export default function ContactPage() {
                         <FormControl>
                           <div className="relative">
                             <MessageSquare className="absolute right-3 top-3 h-5 w-5 text-muted-foreground" />
-                            <Textarea 
-                              placeholder="اكتب تفاصيل رسالتك هنا..." 
-                              className="min-h-[120px] pr-10 resize-none" 
-                              {...field} 
+                            <Textarea
+                              placeholder="اكتب تفاصيل رسالتك هنا..."
+                              className="min-h-[120px] pr-10 resize-none"
+                              {...field}
                             />
                           </div>
                         </FormControl>
@@ -292,8 +301,8 @@ export default function ContactPage() {
                     )}
                   />
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-secondary hover:bg-secondary/90 text-white h-12 text-lg"
                     disabled={isSubmitting}
                   >

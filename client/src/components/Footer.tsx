@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-4 text-slate-400">
               <li>جدة، المملكة العربية السعودية</li>
               <li>info@natls.info</li>
-              <li>566432100 +966</li>
+              <li>566432100 966+</li>
             </ul>
           </div>
 

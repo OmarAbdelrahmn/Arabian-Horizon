@@ -19,12 +19,6 @@ export default function Services() {
       color: "bg-teal-600"
     },
     {
-      title: "المساندة الفنية",
-      description: "توفير خدمات المساندة الفنية والصيانة الطارئة لمركبات النقل لضمان استمرارية العمل.",
-      icon: <Wrench className="w-10 h-10 text-white" />,
-      color: "bg-indigo-600"
-    },
-    {
       title: "التوعية المجتمعية",
       description: "نشر الوعي بأهمية قطاع النقل ودوره الحيوي في الاقتصاد الوطني وتعزيز ثقافة السلامة المرورية.",
       icon: <Users className="w-10 h-10 text-white" />,

@@ -33,8 +33,8 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6 text-secondary">تواصل معنا</h4>
             <ul className="space-y-4 text-slate-400">
               <li>جدة، المملكة العربية السعودية</li>
-              <li>info@transport-support.sa</li>
-              <li>+966 12 345 6789</li>
+              <li>info@natls.info</li>
+              <li>566432100 +966</li>
             </ul>
           </div>
 

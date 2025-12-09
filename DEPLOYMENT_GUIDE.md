@@ -1,5 +1,8 @@
 # Hostinger Deployment Guide
 
+> [!IMPORTANT]
+> **This guide is for STATIC hosting (regular shared hosting).** If you're using **Node.js hosting**, please see [HOSTINGER_NODEJS_DEPLOY.md](./HOSTINGER_NODEJS_DEPLOY.md) instead.
+
 ## Prerequisites
 - Your GitHub repository should be connected to Hostinger
 - Ensure you have Node.js hosting enabled on Hostinger

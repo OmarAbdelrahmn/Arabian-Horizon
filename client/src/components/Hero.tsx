@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Background"
-          className="w-full h-full object-cover"
+          alt="Logo"
+          className="w-[20vw] max-w-[200px] h-auto" // Scales with viewport, max 200px
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-black/20" />

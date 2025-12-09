@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import heroBg from "@/assets/hero_bg.png";
+import logo from "@assets/WhatsApp_Image_2025-12-06_at_16.29.21_5c430c44_1765027956774.jpg";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -25,10 +26,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto space-y-6"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            جمعية دعم النقل
-            <span className="block text-secondary text-3xl md:text-5xl mt-2">والخدمات اللوجستية الأهلية</span>
-          </h1>
+          <div className="flex justify-center mb-8">
+            <img
+              src={logo}
+              alt="شعار الجمعية"
+              className="w-full max-w-[300px] md:max-w-[500px] lg:max-w-[600px] h-auto object-contain drop-shadow-2xl"
+            />
+          </div>
 
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
             نسعى لتعظيم الأثر في خدمة المجتمع والمساهمة في تحقيق مستهدفات رؤية المملكة 2030 من خلال دعم قطاع النقل وتطويره.

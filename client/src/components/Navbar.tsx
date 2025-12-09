@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@assets/WhatsApp_Image_2025-12-06_at_16.29.21_5c430c44_1765027956774.jpg";
+
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -25,11 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-3">
-            <img 
-              src={logo} 
-              alt="شعار الجمعية" 
-              className="h-12 w-auto object-contain"
-            />
+
             <span className="text-lg font-bold text-primary hidden lg:block">
               جمعية دعم النقل
               <br />

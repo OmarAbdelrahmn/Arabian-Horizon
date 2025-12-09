@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Logo"
-          className="w-[20vw] max-w-[200px] h-auto" // Scales with viewport, max 200px
+          alt="Background"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-black/20" />
@@ -30,7 +30,7 @@ export default function Hero() {
             <img
               src={logo}
               alt="شعار الجمعية"
-              className="w-full max-w-[300px] md:max-w-[500px] lg:max-w-[600px] h-auto object-contain drop-shadow-2xl"
+              className="w-full max-w-[150px] md:max-w-[200px] lg:max-w-[250px] h-auto object-contain drop-shadow-2xl"
             />
           </div>
 

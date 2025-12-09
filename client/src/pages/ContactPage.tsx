@@ -164,7 +164,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm opacity-80">البريد الإلكتروني</p>
-                      <p className="font-semibold">info@transport-support.sa</p>
+                      <p className="font-semibold">info@natls.info</p>
                     </div>
                   </div>
 
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm opacity-80">الهاتف</p>
-                      <p className="font-semibold">+966 12 345 6789</p>
+                      <p className="font-semibold">566432100 966+</p>
                     </div>
                   </div>
                 </div>

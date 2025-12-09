@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import heroBg from "@assets/generated_images/abstract_logistic_and_transportation_background_with_blue_and_teal_gradients.png";
+import heroBg from "@/assets/hero_bg.png";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -29,7 +29,7 @@ export default function Hero() {
             جمعية دعم النقل
             <span className="block text-secondary text-3xl md:text-5xl mt-2">والخدمات اللوجستية الأهلية</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
             نسعى لتعظيم الأثر في خدمة المجتمع والمساهمة في تحقيق مستهدفات رؤية المملكة 2030 من خلال دعم قطاع النقل وتطويره.
           </p>

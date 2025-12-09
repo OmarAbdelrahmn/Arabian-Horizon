@@ -1,14 +1,14 @@
-import logo from "@assets/WhatsApp_Image_2025-12-06_at_16.29.21_5c430c44_1765027956774.jpg";
+import logo from "@/assets/logo.jpg";
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white pt-16 pb-8">
       <div className="container px-4 mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
-          
+
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-4 mb-6">
-              <img src={logo} alt="شعار الجمعية" className="h-16 w-auto brightness-0 invert opacity-90" />
+              <img src={logo} alt="شعار الجمعية" className="h-16 w-auto opacity-90" />
               <div>
                 <h3 className="text-xl font-bold">جمعية دعم النقل</h3>
                 <p className="text-sm text-slate-400">والخدمات اللوجستية الأهلية</p>

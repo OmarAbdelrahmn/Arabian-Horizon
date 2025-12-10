@@ -1,0 +1,7 @@
+﻿
+> arabian-horizon@1.0.0 build
+> vite build
+
+[36mvite v7.1.12 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 1894 modules transformed.

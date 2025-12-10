@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import heroBg from "@/assets/hero_bg.png";
-import logo from "@assets/WhatsApp_Image_2025-12-06_at_16.29.21_5c430c44_1765027956774.jpg";
+import logo from "@assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-[80vh] overflow-hidden">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -18,39 +18,47 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Content */}
-      <div className="container relative z-10 px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto space-y-6"
-        >
-          <div className="flex justify-center mb-8">
-            <img
-              src={logo}
-              alt="شعار الجمعية"
-              className="w-full max-w-[150px] md:max-w-[200px] lg:max-w-[250px] h-auto object-contain drop-shadow-2xl"
-            />
-          </div>
+      {/* Logo - Top Right Corner */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        className="absolute top-4 right-4 md:top-8 md:right-8 z-20"
+      >
+        <img
+          src={logo}
+          alt="شعار الجمعية"
+          className="w-32 md:w-40 lg:w-48 h-auto object-contain drop-shadow-2xl"
+        />
+      </motion.div>
 
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
-            نسعى لتعظيم الأثر في خدمة المجتمع والمساهمة في تحقيق مستهدفات رؤية المملكة 2030 من خلال دعم قطاع النقل وتطويره.
-          </p>
+      {/* Content - Bottom Center */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 pb-6 md:pb-6 lg:pb-6">
+        <div className="container px-4 mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto space-y-6 text-center"
+          >
+            <p className="text-md md:text-lg lg:text-2xl text-white leading-relaxed font-medium">
+              نسعى لتعظيم الأثر في خدمة المجتمع والمساهمة في تحقيق مستهدفات رؤية المملكة 2030 من خلال دعم قطاع النقل وتطويره.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Link href="/services">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6 rounded-full w-full sm:w-auto">
-                تعرف على خدماتنا
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6 rounded-full w-full sm:w-auto">
-                تواصل معنا
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+              <Link href="/services">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6 rounded-full w-full sm:w-auto shadow-lg">
+                  تعرف على خدماتنا
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="text-white border-2 border-white hover:bg-white/20 text-lg px-8 py-6 rounded-full w-full sm:w-auto shadow-lg">
+                  تواصل معنا
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
